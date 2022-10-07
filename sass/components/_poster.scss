@@ -1,0 +1,32 @@
+.poster {
+    width: 696px;
+    padding: 0;  
+}
+.page-poster {
+/*    max-width: 1600px; */
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+
+    color: var(--color-white);
+    /* Overlay */
+    background-color: rgba(47, 48, 58, 0.4);
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url('../images/Main-img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.page-poster__title {
+    margin: 0;
+    @include font-style(900, 44px, 1.36, 0.06em);    
+    color: var(--color-white);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}

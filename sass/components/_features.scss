@@ -1,0 +1,28 @@
+.select-features {
+    display: flex;
+    align-items: flex-start;        
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.select-features__item {
+    flex-basis: calc((100% - 90px)/4);
+}
+.select-features__item {
+    width: 270px;
+}
+.select-features__icon {
+    display: flex;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.select-features__title {
+    @include font-style(700, 14px, 1.14, $space: 0.03em);
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--color-title);
+}

@@ -1,0 +1,27 @@
+.logo {
+    display: inline-block;
+    margin-right: 93px;
+    text-decoration: none;
+    color: var(--color-accent);
+    font-family: var(--font-logo);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    &:focus {outline: transparent;}
+}
+
+.logo-color {
+    color: var(--color-title);
+}
+.footer--logo {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.revers {
+    color: var(--color-white);
+}

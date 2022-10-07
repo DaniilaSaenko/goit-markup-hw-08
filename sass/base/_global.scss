@@ -1,0 +1,42 @@
+body {
+    background-color: var(--color-white);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+button {
+    font-family: inherit;
+        cursor: pointer;
+        border-color: transparent;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: background-color --cubic-250,
+        color --cubic-250;
+}
+
+address {
+    font-style: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

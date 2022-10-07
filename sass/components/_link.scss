@@ -1,0 +1,18 @@
+.link {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    color: var(--color-title);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    fill: currentColor;
+    transition: color var(--cubic-250),
+        background-color var(--cubic-250);
+    &:hover,
+    &:focus {
+    color: var(--color-accent);
+    outline: transparent;}       
+}
+

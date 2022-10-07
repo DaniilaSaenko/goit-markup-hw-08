@@ -1,0 +1,25 @@
+.select-client {
+    @include flex-centered;
+    flex-wrap: wrap;
+    gap: 30px;   
+}
+.select-client__item {
+    flex-basis: calc((100% - 150px)/6);
+}
+.select-client__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    fill: var(--color-icon);
+    transition: background-color --cubic-250,
+        color var(--cubic-250);
+        &:hover, &:focus {
+            border: 1px solid var(--color-accent);
+            fill: var(--color-accent);
+            outline: transparent;
+        }
+}
