@@ -1,28 +1,45 @@
 .select-features {
-    display: flex;
-    align-items: flex-start;        
+    @media screen and (min-width: $tablet) {    
+    display: flex;     
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+    }
 }
 .select-features__item {
-    flex-basis: calc((100% - 90px)/4);
+    flex-basis: 100%;
+
+    @media screen and (min-width: $tablet) {
+
+        flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @media screen and (min-width: $desctop) {
+
+        flex-basis: calc((100% - 90px) / 4);
+    }
+  
 }
-.select-features__item {
-    width: 270px;
+
+.select-features__item:not(:last-child) {
+    margin-bottom: 30px;
 }
+
 .select-features__icon {
-    display: flex;
+    @include flex-centered;
     height: 120px;
     margin-bottom: 30px;
     background-color: #F5F4FA;
     border-radius: 4px;
-    align-items: center;
-    justify-content: center;
+
 }
 .select-features__title {
     @include font-style(700, 14px, 1.14, $space: 0.03em);
     margin: 0;
+    text-transform: uppercase;
+    text-align: center;
     margin-bottom: 10px;
     color: var(--color-title);
+    @media screen and (min-width: $tablet) {
+            text-align: left;}
 }

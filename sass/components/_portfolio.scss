@@ -1,17 +1,45 @@
 .select-projeckt {
-    @include flex-centered;
-    flex-wrap: wrap;
-    gap: 30px;
+    margin-bottom: 30px;
+    @media screen and (min-width: $tablet) {
+    display: flex;
+        align-items: center;
+ 
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+         @media screen and (min-width: $desctop) {
+             justify-content: center;  
+         }
 }
 .select-button {
-    @include flex-centered;
-    margin-bottom: 50px;
+    display: flex;
+    margin-bottom: 40px;
+    @media screen and (max-width: $pre-tablet) {
+            flex-wrap: wrap;
+        }
+        @media screen and (min-width: $tablet) {
+            margin-bottom: 30px;
+            justify-content: center;}
+        @media screen and (min-width: $desctop) {
+
+            margin-bottom: 50px;}
 }
 
-.select-button__item:not(:last-child) {
+/*.select-button__item:not(:last-child) {
     margin-right: 8px;
-}
+}*/
 
+.select-button__item {
+    @media screen and (max-width: $pre-tablet) {
+    &:not(:last-child) {
+        margin-right: 8px;
+        margin-bottom: 15px;
+    }
+}
+    @media screen and (min-width: $tablet) {
+    &+& {margin-left: 8px;}
+    }
+}
 .select-button__link {
     min-width: 73px;
     max-width: 130px;
@@ -36,7 +64,16 @@
     }
 }
 .select-projeckt__item {
+    flex-basis: 100%;
+    @media screen and (min-width: $tablet) {
+            max-width: 354px;
+            flex-basis: calc((100% - 30px) / 2);
+        }
+    
+        @media screen and (min-width: $desctop) {
+        max-width: 370px;
     flex-basis: calc((100% - 60px)/3);
+    }
 }
 .select-projeckt__card {
     display: block;
@@ -44,13 +81,14 @@
     font-size: 16px;
     line-height: 1.88;
     transition: box-shadow var(--cubic-250);
-}
-
-.select-projeckt__card:hover,
-.select-projeckt__card:focus {
+    &:hover,
+    &:focus {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     outline: transparent;
+}    
 }
+
+
 .select-projeckt__image {
     margin-bottom: 0;
 }
@@ -70,7 +108,16 @@
 
 .select-projeckt__content {
     display: block;
-    width: 370px;
+    max-width: 100%;
+    margin-bottom: 30px;
+        
+    @media screen and (min-width: $tablet) {
+                margin-bottom: 0px;
+                max-width: 354px;
+            height: 146px;}
+        @media screen and (min-width: $desctop) {
+            margin-bottom: 0px;
+            max-width: 370px;}
     background: var(--color-white);
     border: 1px solid var(--color-borders);
     border-top: none;

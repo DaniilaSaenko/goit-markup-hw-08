@@ -7,7 +7,7 @@
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.06em;
-    text-align: center;    
+    text-align: center; 
     border-radius: 4px;
     cursor: pointer;    
     border-color: transparent;
@@ -27,28 +27,5 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     }
 }
-.button--footer {
-    @include flex-centered;
-    margin-left: 12px;
-    flex-wrap: wrap;
-    gap: 10px;
-    fill: currentColor;
 
-    &:hover,
-    &:focus {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        transition: box-shadow var(--cubic-250);
-    }
-}
-
-.button--modal {
-    @include flex-centered;
-    margin-right: auto;
-    margin-left: auto;
-    &:hover,
-    &:focus {
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            transition: box-shadow var(--cubic-250);
-        }
-}
 

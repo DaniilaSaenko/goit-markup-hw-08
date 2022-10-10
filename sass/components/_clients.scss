@@ -4,12 +4,30 @@
     gap: 30px;   
 }
 .select-client__item {
-    flex-basis: calc((100% - 150px)/6);
+    
+    flex-basis: calc((100% - 30px) / 2);
+
+    @media screen and (min-width: $tablet) {
+                flex-basis: calc((100% - 60px) / 3);
+    }
+    @media screen and (min-width: $desctop) {
+                flex-basis: calc((100% - 150px) / 6);
+    }
 }
+
 .select-client__link {
     display: flex;
-    width: 170px;
+    
+    min-width: 210px;
     height: 92px;
+    
+@media screen and (min-width: $tablet) {
+    min-dth: 226px;
+    }
+
+    @media screen and (min-width: $desctop) {
+    min-width: 170px;
+    }
     border: 1px solid #AFB1B8;
     border-radius: 4px;
     align-items: center;

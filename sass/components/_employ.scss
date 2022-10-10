@@ -1,4 +1,6 @@
 .page--employ {
+    @media screen and (max-width: $desctop)  {
+                display: none; }
     padding-top: 0;
 }
 .select-employ {
