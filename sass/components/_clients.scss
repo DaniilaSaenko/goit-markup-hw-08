@@ -17,12 +17,11 @@
 
 .select-client__link {
     display: flex;
-    
     min-width: 210px;
     height: 92px;
     
 @media screen and (min-width: $tablet) {
-    min-dth: 226px;
+    min-width: 226px;
     }
 
     @media screen and (min-width: $desctop) {

@@ -153,9 +153,13 @@
 }
 
 .policy label {
+    font-size: 12px;
+    line-height: 1.17;
+    color: var(--color-text);        
+    @media screen and (min-width: $desctop) {
     font-size: 14px;
-    line-height: 1.71;
-    color: var(--color-text);
+    line-height: 1.71;}
+
 }
 
 .policy-link {
