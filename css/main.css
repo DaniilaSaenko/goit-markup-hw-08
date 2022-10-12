@@ -698,23 +698,22 @@ img {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Main-img1200.jpg");
   }
 }
-
-/*
-@media screen and (min-width:769px) {
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-device-pixel-ratio: 2/1),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-        background-image: linear-gradient(to right,
-                rgba(47, 48, 58, 0.4),
-                rgba(47, 48, 58, 0.4)),
-
-            url('../images/Main-img@2x-1200.jpg');
-    }
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 480px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 480px), screen and (min-device-pixel-ratio: 2/1) and (max-width: 480px), screen and (min-resolution: 192dpi) and (max-width: 480px), screen and (min-resolution: 2dppx) and (max-width: 480px) {
+  .page-poster {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Main-img@2x-480.jpg");
+  }
 }
-*/
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 481px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 481px), screen and (min-device-pixel-ratio: 2/1) and (min-width: 481px), screen and (min-resolution: 192dpi) and (min-width: 481px), screen and (min-resolution: 2dppx) and (min-width: 481px) {
+  .page-poster {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Main-img@2x-768.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 769px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), screen and (min-device-pixel-ratio: 2/1) and (min-width: 769px), screen and (min-resolution: 192dpi) and (min-width: 769px), screen and (min-resolution: 2dppx) and (min-width: 769px) {
+  .page-poster {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Main-img@2x-1200.jpg");
+  }
+}
+
 .page-poster__title {
   font-weight: 900;
   font-size: 26px;
@@ -1131,32 +1130,34 @@ img {
 .footer--container {
   text-align: center;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer--container {
     display: flex;
     flex-wrap: wrap;
-    align-items: space-around;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1200px) {
-  .footer--container {
-    text-align: start;
+    justify-content: space-between;
     align-items: baseline;
+    text-align: left;
   }
 }
 
-.footer-one, .footer-social {
+.footer-tablet {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
-  .footer-one, .footer-social {
-    margin-bottom: 0px;
+  .footer-tablet {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
-@media screen and (min-width: 768px) {
+.footer-one {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
   .footer-one {
     margin-right: 70px;
+    margin-bottom: 0px;
   }
 }
 
@@ -1169,57 +1170,35 @@ img {
   outline: transparent;
 }
 
-.footer-social__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  color: var(--color-white);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
 .social--footer {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--color-white);
 }
 
 .footer-conect {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: flex-end;
+  text-align: center;
   padding: 0;
 }
 @media screen and (min-width: 1200px) {
   .footer-conect {
-    width: 570px;
-    margin-left: auto;
+    text-align: left;
   }
 }
 
 .footer-send {
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 1200px) {
   .footer-send {
-    width: 450px;
+    display: flex;
+    flex-direction: row;
   }
 }
 
-.footer-send label {
-  color: var(--color-white);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.17;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
 .footer-input {
+  display: block;
   margin-bottom: 20px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   font-weight: 400;
@@ -1236,17 +1215,43 @@ img {
 .footer-input:hover, .footer-input:focus {
   border: 1px solid var(--color-accent);
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-input {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer-input {
     margin-bottom: 0px;
+    width: 358px;
   }
 }
 
+.footer-conect__title {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-social__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
 .button--footer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: inline-block;
+  width: 200px;
   gap: 10px;
   fill: currentColor;
 }
@@ -1258,6 +1263,10 @@ img {
 .button--footer:hover, .button--footer:focus {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: box-shadow var(--cubic-250);
+}
+
+.footer-send .icon {
+  vertical-align: middle;
 }
 
 /* Modal-wind */
@@ -1288,8 +1297,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 450px;
-  height: 609px;
+  max-width: 450px;
+  min-height: 609px;
   background-color: var(--color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1302,8 +1311,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
-    height: 581px;
+    max-width: 528px;
+    min-height: 581px;
   }
 }
 
@@ -1410,9 +1419,15 @@ img {
 }
 
 .policy label {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--color-text);
+}
+@media screen and (min-width: 1200px) {
+  .policy label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .policy-link {
