@@ -27,7 +27,7 @@
 .mobile-header__button {
     @include flex-centered;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 15px;
 
     width: 40px;
@@ -36,6 +36,8 @@
     cursor: pointer;
     transition: fill var(--cubic-250);
 }
+
+
 
 .menu-container__button {
 
@@ -179,16 +181,9 @@
         @include font-style (500, 12px, 1.17, 0.02em);}
     transition: color var(--cubic-250);
 
-    &:focus {
-        @media screen and (max-width: 479px) {
-        @include font-style (500, 24px, 1.17, 0.02em);}            
-        @media screen and (min-width: $mobile) and (max-width: $pre-tablet) {
-        @include font-style (500, 34px, 1.17, 0.02em);}
-        color: var(--color-accent);
-        outline: transparent;
-        }
+    &:focus, &:hover{
         @media screen and (min-width: $tablet) {
-          &:hover {
+           
             color: var(--color-accent);
             outline: transparent;           
             }
@@ -197,6 +192,9 @@
 
 .current {
     color: var(--color-accent);
+          
+        @media screen and (min-width: $mobile) and (max-width: $pre-tablet) {
+        @include font-style (500, 34px, 1.17, 0.02em);}
 }
 
 
